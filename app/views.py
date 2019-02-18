@@ -11,7 +11,7 @@ def news(news_id):
     '''
     return render_template('news.html',id = news_id)
 
-# Views
+# Views 
 @app.route('/')
 def index():
 
