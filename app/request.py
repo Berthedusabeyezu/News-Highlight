@@ -11,7 +11,7 @@ base_url = app.config["NEWS_API_BASE_URL"]
 
 News = news.News
 
-def get_news(category):
+def get_news(category): 
     '''
     Function that gets the json response to our url request
     '''
