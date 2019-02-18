@@ -1,8 +1,8 @@
 from flask import render_template
 from app import app
 from .request import get_news
-# from .requests import get_news,get_sources
 
+ 
 @app.route('/news/<news_id>')
 def news(news_id):
 
