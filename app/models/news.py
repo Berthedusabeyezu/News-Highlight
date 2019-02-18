@@ -1,4 +1,4 @@
-class NewsSource:
+class News:
     '''
     NewsSource class to define NewsSource Objects
     '''

@@ -1,5 +1,7 @@
 from flask import render_template
 from app import app
+from .request import get_news
+# from .requests import get_news,get_sources
 
 @app.route('/news/<news_id>')
 def news(news_id):
@@ -16,4 +18,21 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    return render_template('index.html')
+     # Getting popular new
+    category_news = get_news('general')
+    print(category_news)
+    business_news = get_news('business')
+    sports_news = get_news('sports')
+    title = 'Home - Welcome to The best News Review Website Online'
+    return render_template('index.html', title = title, general = category_news, business = business_news, sports = sports_news)
+
+@app.route('/new/<int:id>')
+def new(id):
+
+    '''
+    View new page function that returns the new details page and its data
+    '''
+    new = get_new(id)
+    title = f'{new.title}'
+
+    return render_template('new.html',title = title,movie = new)
