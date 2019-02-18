@@ -55,7 +55,7 @@ def process_results(new_list):
             new_results.append(new_object)
 
     return new_results
-
+   
 def get_sources(id): 
     get_sources_details_url = base_url.format(id,api_key)
 
