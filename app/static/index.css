@@ -1,0 +1,13 @@
+
+body{
+       
+      background-color: bisque;
+      border: solid;
+}
+.row{
+    background-color: aquamarine;
+}
+.container-fluid{
+    text-align: center;
+    color: aqua;
+}
