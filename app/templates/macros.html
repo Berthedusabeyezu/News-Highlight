@@ -3,16 +3,29 @@
     {% for news in new_list %}
         <!-- <li>{{ news.id}}</li> -->
         <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 new-card">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <li class="text-center">
+                       <a href="/new/{{news.id}}">
+                        {{ news.name|truncate(10)}}</a>
+                    </li>
+                </div>
                 <p>{{ news.description }}</p>
-                <li class="text-center">
-                  <a href="/news/{{news.id}}">
-                    {{ news.name|truncate(10)}}</a>
-                </li>
                 <p>{{ news.language }}</p>
                 <p>{{ news.country }}</p>
+            </div>
         </div>
                
                
+    {% endfor %}
+
+{% endmacro %}
+
+
+{% macro displayArticlesList(articles_list) %}
+
+    {% for articles in articles_list %}
+        <li>{{ articles.title}}</li>
     {% endfor %}
 
 {% endmacro %}
